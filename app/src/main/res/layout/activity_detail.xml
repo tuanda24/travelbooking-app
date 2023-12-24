@@ -245,7 +245,7 @@ architectural features and high-end finishes.
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button"
+                    android:id="@+id/btn_book"
                     style="@android:style/Widget.Button"
                     android:layout_width="0dp"
                     android:layout_height="50dp"

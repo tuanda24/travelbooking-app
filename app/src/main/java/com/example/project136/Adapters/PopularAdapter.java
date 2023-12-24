@@ -17,27 +17,29 @@ import com.example.project136.Activities.DetailActivity;
 import com.example.project136.Domains.PopularDomain;
 import com.example.project136.R;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.List;
 
-public class PupolarAdapter extends RecyclerView.Adapter<PupolarAdapter.ViewHolder> {
+public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHolder> {
     ArrayList<PopularDomain> items;
 
-
-    public PupolarAdapter(ArrayList<PopularDomain> items) {
+    public void updateData(List<PopularDomain> filteredList) {
+        notifyDataSetChanged();
+    }
+    public PopularAdapter(ArrayList<PopularDomain> items) {
         this.items = items;
-
+        notifyDataSetChanged();
     }
 
     @NonNull
     @Override
-    public PupolarAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PopularAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_popular, parent, false);
         return new ViewHolder(inflate);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PupolarAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PopularAdapter.ViewHolder holder, int position) {
         holder.titleTxt.setText(items.get(position).getTitle());
         holder.locationTxt.setText(items.get(position).getLocation());
         holder.scoreTxt.setText("" + items.get(position).getScore());

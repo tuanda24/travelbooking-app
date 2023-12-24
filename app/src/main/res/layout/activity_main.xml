@@ -87,9 +87,9 @@ To Travel"
                     android:layout_marginBottom="8dp"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/editTextText"
-                        android:layout_width="wrap_content"
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchView"
+                        android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_weight="1"
                         android:background="@drawable/search_background"
@@ -101,24 +101,11 @@ To Travel"
                         android:padding="16dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:imeOptions="actionSearch"/>
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="16dp"
-                        android:background="@drawable/settings_background">
 
-                        <ImageView
-                            android:id="@+id/imageView5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/settings" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+
                 </LinearLayout>
             </LinearLayout>
 
