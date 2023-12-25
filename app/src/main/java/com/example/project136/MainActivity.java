@@ -1,20 +1,13 @@
 package com.example.project136;
 
-import android.os.AsyncTask;
-
 import com.example.project136.base.BaseActivity;
 import com.example.project136.data.model.CategoryDomain;
 import com.example.project136.data.model.PopularDomain;
 import com.example.project136.data.repository.TravelBookingRepository;
 import com.example.project136.databinding.ActivityMainBinding;
-import com.example.project136.ui.home.CategoryAdapter;
-import com.example.project136.ui.home.PopularAdapter;
-import com.google.android.gms.tasks.Task;
-import com.google.android.gms.tasks.Tasks;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
-
+import com.example.project136.utils.SharedPreferencesManager;
+import com.example.project136.view.home.CategoryAdapter;
+import com.example.project136.view.home.PopularAdapter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -35,6 +28,11 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         binding.rcCategory.setAdapter(categoryAdapter);
         popularAdapter.setItemList(getPopular());
         categoryAdapter.setItemList(getCategory());
+        binding.tvSignOut.setOnClickListener(v -> {
+            SharedPreferencesManager sharedPreferencesManager = new SharedPreferencesManager(this);
+            sharedPreferencesManager.setLoggedIn(false);
+            finishAndRemoveTask();
+        });
     }
 
     private ArrayList<PopularDomain> getPopular() {

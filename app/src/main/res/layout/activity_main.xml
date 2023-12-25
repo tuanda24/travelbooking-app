@@ -60,6 +60,18 @@
                         app:layout_constraintStart_toEndOf="@+id/imageView3"
                         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
+                    <TextView
+                        android:text="SignOut"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:id="@+id/tvSignOut"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="wrap_content"

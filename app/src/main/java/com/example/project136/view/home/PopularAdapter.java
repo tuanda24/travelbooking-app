@@ -1,4 +1,4 @@
-package com.example.project136.ui.home;
+package com.example.project136.view.home;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
 import com.example.project136.base.BaseAdapter;
 import com.example.project136.data.model.PopularDomain;
 import com.example.project136.databinding.ItemPopularBinding;
-import com.example.project136.ui.detail.DetailActivity;
+import com.example.project136.view.detail.DetailActivity;
 
 public class PopularAdapter extends BaseAdapter<PopularDomain, ItemPopularBinding> {
 

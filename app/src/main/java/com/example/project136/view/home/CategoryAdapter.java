@@ -1,4 +1,4 @@
-package com.example.project136.ui.home;
+package com.example.project136.view.home;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
