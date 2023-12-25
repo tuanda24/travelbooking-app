@@ -25,4 +25,7 @@ public class CategoryDomain {
     public void setPicPath(String picPath) {
         this.picPath = picPath;
     }
+
+    public CategoryDomain() {
+    }
 }

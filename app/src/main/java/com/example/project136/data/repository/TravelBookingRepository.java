@@ -1,7 +1,5 @@
 package com.example.project136.data.repository;
 
-import android.annotation.SuppressLint;
-
 import androidx.annotation.NonNull;
 
 import com.example.project136.data.model.CategoryDomain;
@@ -10,8 +8,6 @@ import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,5 +1,7 @@
 package com.example.project136;
 
+import android.os.AsyncTask;
+
 import com.example.project136.base.BaseActivity;
 import com.example.project136.data.model.CategoryDomain;
 import com.example.project136.data.model.PopularDomain;
@@ -7,9 +9,15 @@ import com.example.project136.data.repository.TravelBookingRepository;
 import com.example.project136.databinding.ActivityMainBinding;
 import com.example.project136.ui.home.CategoryAdapter;
 import com.example.project136.ui.home.PopularAdapter;
+import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.Tasks;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
@@ -54,13 +62,11 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     }
 
     private List<CategoryDomain> getCategory() {
-        ArrayList<CategoryDomain> catsList = new ArrayList<>();
-        catsList.add(new CategoryDomain("Beaches", "cat1"));
-        catsList.add(new CategoryDomain("Camps", "cat2"));
-        catsList.add(new CategoryDomain("Forest", "cat3"));
-        catsList.add(new CategoryDomain("Desert", "cat4"));
-        catsList.add(new CategoryDomain("Mountain", "cat5"));
-        return catsList;
+        try {
+            return CompletableFuture.supplyAsync(TravelBookingRepository::getCategory).join();
+        } catch (Exception e) {
+            return new ArrayList<>();
+        }
     }
 
 }
