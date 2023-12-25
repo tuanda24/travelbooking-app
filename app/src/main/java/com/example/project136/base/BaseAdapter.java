@@ -2,6 +2,9 @@ package com.example.project136.base;
 
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+
+import com.example.project136.data.model.CategoryDomain;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,11 +13,11 @@ public abstract class BaseAdapter<T, VB extends ViewBinding> extends RecyclerVie
     private List<T> itemList;
 
     public BaseAdapter() {
-        this.itemList = new ArrayList<>();
+        itemList = new ArrayList<>();
     }
 
     public abstract class BaseViewHolder extends RecyclerView.ViewHolder {
-        protected VB binding;
+        public VB binding;
 
         public BaseViewHolder(VB binding) {
             super(binding.getRoot());
@@ -22,6 +25,7 @@ public abstract class BaseAdapter<T, VB extends ViewBinding> extends RecyclerVie
         }
 
         public abstract void setData(T item);
+
     }
 
     @Override

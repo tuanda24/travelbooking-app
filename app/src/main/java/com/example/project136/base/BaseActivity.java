@@ -8,7 +8,7 @@ import androidx.viewbinding.ViewBinding;
 
 public abstract class BaseActivity<VB extends ViewBinding> extends AppCompatActivity {
     private final LayoutInflaterBinding<VB> bindingInflater;
-    private VB binding;
+    public VB binding;
 
     public BaseActivity(LayoutInflaterBinding<VB> bindingInflater) {
         this.bindingInflater = bindingInflater;

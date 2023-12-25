@@ -140,9 +140,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
-                tools:itemCount="5"
+                android:orientation="horizontal"
                 android:paddingStart="8dp"
-                android:paddingEnd="8dp" />
+                android:paddingEnd="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -156,8 +157,8 @@
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginVertical="16dp"
+                    android:layout_weight="1"
                     android:text="Category"
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -174,13 +175,13 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcCategory"
-                tools:itemCount="5"
-
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
+                android:orientation="horizontal"
                 android:paddingStart="8dp"
-                android:paddingEnd="8dp" />
+                android:paddingEnd="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
         </LinearLayout>
     </ScrollView>
 
