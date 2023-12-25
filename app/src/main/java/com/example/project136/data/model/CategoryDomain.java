@@ -1,4 +1,4 @@
-package com.example.project136.Domains;
+package com.example.project136.data.model;
 
 public class CategoryDomain {
 

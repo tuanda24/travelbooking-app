@@ -1,4 +1,4 @@
-package com.example.project136.Activities;
+package com.example.project136.ui.login;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.project136.MainActivity;
 import com.example.project136.R;
 
 public class LoginActivity extends AppCompatActivity {

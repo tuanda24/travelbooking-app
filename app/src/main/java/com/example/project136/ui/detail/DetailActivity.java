@@ -1,4 +1,4 @@
-package com.example.project136.Activities;
+package com.example.project136.ui.detail;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.project136.Domains.PopularDomain;
+import com.example.project136.data.model.PopularDomain;
 import com.example.project136.R;
 
 public class DetailActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.project136.Adapters;
+package com.example.project136.ui.home;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.project136.Domains.CategoryDomain;
+import com.example.project136.data.model.CategoryDomain;
 import com.example.project136.R;
 
 import java.util.ArrayList;

@@ -1,42 +1,34 @@
-package com.example.project136.Activities;
+package com.example.project136;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Toast;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import androidx.appcompat.widget.SearchView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.project136.Adapters.CategoryAdapter;
-import com.example.project136.Adapters.PopularAdapter;
-import com.example.project136.Domains.CategoryDomain;
-import com.example.project136.Domains.PopularDomain;
-import com.example.project136.R;
+import com.example.project136.data.model.CategoryDomain;
+import com.example.project136.data.model.PopularDomain;
+import com.example.project136.base.BaseActivity;
+import com.example.project136.databinding.ActivityMainBinding;
+import com.example.project136.ui.home.CategoryAdapter;
+import com.example.project136.ui.home.PopularAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
     private RecyclerView.Adapter adapterPopular, adapterCat;
     private RecyclerView recyclerViewPopular, recyclerViewCategory;
     private SearchView searchView;
     public ArrayList<PopularDomain> items;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initRecyclerView();
+    public MainActivity(LayoutInflaterBinding<ActivityMainBinding> bindingInflater) {
+        super(bindingInflater);
+    }
 
+    @Override
+    protected void initView() {
+        super.initView();
+        initRecyclerView();
     }
 
     private void initRecyclerView() {

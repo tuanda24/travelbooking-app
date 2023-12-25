@@ -1,4 +1,4 @@
-package com.example.project136.Adapters;
+package com.example.project136.ui.home;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
-import com.example.project136.Activities.DetailActivity;
-import com.example.project136.Domains.PopularDomain;
+import com.example.project136.ui.detail.DetailActivity;
+import com.example.project136.data.model.PopularDomain;
 import com.example.project136.R;
 
 import java.util.ArrayList;

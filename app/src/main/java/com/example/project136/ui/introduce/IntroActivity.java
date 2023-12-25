@@ -1,12 +1,12 @@
-package com.example.project136.Activities;
+package com.example.project136.ui.introduce;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
+import com.example.project136.ui.login.LoginActivity;
 import com.example.project136.R;
 
 public class IntroActivity extends AppCompatActivity {
