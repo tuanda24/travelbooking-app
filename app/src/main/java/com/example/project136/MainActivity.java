@@ -1,15 +1,15 @@
 package com.example.project136;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView.Adapter;
 import com.example.project136.base.BaseActivity;
 import com.example.project136.data.model.CategoryDomain;
 import com.example.project136.data.model.PopularDomain;
+import com.example.project136.data.repository.TravelBookingRepository;
 import com.example.project136.databinding.ActivityMainBinding;
 import com.example.project136.ui.home.CategoryAdapter;
 import com.example.project136.ui.home.PopularAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
@@ -53,7 +53,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
         return items;
     }
 
-    private ArrayList<CategoryDomain> getCategory() {
+    private List<CategoryDomain> getCategory() {
         ArrayList<CategoryDomain> catsList = new ArrayList<>();
         catsList.add(new CategoryDomain("Beaches", "cat1"));
         catsList.add(new CategoryDomain("Camps", "cat2"));
